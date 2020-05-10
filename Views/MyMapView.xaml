@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="FlightSimulatorApp.Views.MyMapView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlightSimulatorApp.Views"
+             xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="450">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="450"  VerticalAlignment="Top" Width="450" />
+        <m:Map x:Name="myMap" ZoomLevel="12" Center="32.0026333,34.873331" CredentialsProvider="6wuLGHo8aPCizHM0VbFa~vSTL2FmGFLYUpJyoSAhIEg~AuGeAXtSv05UMwomEcGf4vhGldj3pSuSIWKtt5pSIg_N_Wdw4jFtE6Sh8TBv4j7W" Width="450" RenderTransformOrigin="0.5,0.5" Canvas.Top="-39" Canvas.Left="29">
+            <m:Map.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </m:Map.RenderTransform>
+
+            <m:Pushpin x:Name="pin" Location ="{Binding VM_Location, Mode=OneWay}"  HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+                <m:Pushpin.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform x:Name="PlainPosition"/>
+                    </TransformGroup>
+                </m:Pushpin.RenderTransform>
+                <Image x:Name="plane" Source ="planeillustration.png"  Width="20" VerticalAlignment="Center" Height="20" HorizontalAlignment="Center"/>
+            </m:Pushpin>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,414">
+                <TextBlock x:Name ="LatText" Text="{Binding VM_LatitudeT , Mode=OneWay}" TextWrapping="Wrap"  VerticalAlignment="Top" FontWeight="Bold" Margin="5,0,0,0" />
+                <TextBlock x:Name ="LongText" Text="{Binding VM_LongitudeT, Mode=OneWay}" TextWrapping="Wrap"  VerticalAlignment="Top" FontWeight="Bold" Margin="5,0,0,0" />
+            </StackPanel>
+        </m:Map>
+
+    </Grid>
+
+</UserControl>

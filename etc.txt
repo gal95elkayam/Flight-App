@@ -1,0 +1,39 @@
+311007256, Sarah De Paz
+313532178, Gal Elkayam
+
+Bonuses:
+1. Implementations of MVVM correctly.
+2. Intuitive and highly adaptive application - connection and disconnect is smooth (with the use of Tasks).
+3. The Design is simple but affective. Less is more.
+
+About Our Application:
+The Application provides a simple and clean GUI for fly an airplane (with a flight simulator).
+The app follows the MVVM design for WPF applications and is written mainly in C# and the Observer design pattern is used widely and in many ways along the code.
+The ViewModels and the Model are initialized at the startup of the program at App.xaml and are independent.
+The Model:
+The model is responsible to make a connection with the simulator server and get information about the Dashboard. There is only one model.
+The Views:
+Each View is an Observer, and gets their information from 3 independent view models.
+Each View is also a Subject and sends updates to the relevant view Model.
+The View Models:
+There are 3 view models, each one is responsible to different matter.
+DashBoardViewModel- is responsible for the Dashboard component.
+MyJoystickViewModel - is responsible for the Joystick component.
+MyMapViewModel - is responsible for the Map component.
+
+
+Features:
+
+Fly button:
+Will open a Connect window to start the app, the user can fill out the details of IP and Port or connect to the default IP and Port.
+
+Disconnect button:
+Meant to stop the connection, which can be re-started at any point by clicking Fly.
+
+Connection Status:
+There is a window that display to the user about the connection status.
+
+Errors:
+Errors massages are displays on the UI if there is a connection problem with the simulator, invalid inputs given from the simulator, 10 sec timeout for reading a massage, or any other issue.
+
+Enjoy yourself and have a safe flight!
