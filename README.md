@@ -19,4 +19,4 @@ The **ViewModels** and the **Model** are initialized at the startup of the progr
 
 
 
-                                         ![sim2](https://user-images.githubusercontent.com/59448091/112907170-12ff2e00-90f6-11eb-9c69-cd1933e1ec35.PNG)
+![sim2](https://user-images.githubusercontent.com/59448091/112907170-12ff2e00-90f6-11eb-9c69-cd1933e1ec35.PNG)
