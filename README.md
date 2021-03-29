@@ -11,3 +11,7 @@ The **ViewModels** and the **Model** are initialized at the startup of the progr
 **The Views**: Each View is an Observer, and gets their information from 3 independent view models. Each View is also a Subject and sends updates to the relevant view Model.
 
 **The View Models**: There are 3 view models, each one is responsible to different matter. DashBoardViewModel- is responsible for the Dashboard component. MyJoystickViewModel - is responsible for the Joystick component. MyMapViewModel - is responsible for the Map component.
+
+
+
+![sim2](https://user-images.githubusercontent.com/59448091/112907170-12ff2e00-90f6-11eb-9c69-cd1933e1ec35.PNG)
